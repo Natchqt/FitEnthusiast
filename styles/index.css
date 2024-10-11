@@ -1,0 +1,225 @@
+body {
+  padding-top: 56px; /* Space for the fixed navbar */
+}
+
+.navbar {
+  background-color: black; /* Change navbar background to black */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.25rem; /* Adjust the font size as needed */
+  padding: 0.5rem 1rem; /* Optional: adjust padding for better spacing */
+  color: white; /* Keep the link color white for contrast */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Adjust the brand font size if needed */
+  color: white; /* Brand color */
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+  background: rgb(133, 210, 154);
+  background: radial-gradient(
+    circle,
+    rgba(133, 210, 154, 1) 0%,
+    rgba(31, 187, 180, 1) 100%
+  );
+  color: white; /* Ensure hover text color remains white */
+  border-radius: 33px; /* Rounded corners */
+}
+
+/* Trainer Section */
+.trainers-section {
+  background-color: #f8f9fa; /* Light background color for the whole section */
+  background-size: cover; /* Ensures the image covers the entire section */
+  padding: 150px 40px; /* Spacing */
+}
+
+/* Trainer Card Styling */
+.trainer-card {
+  background-color: white !important; /* Force white background for the trainer card */
+  margin-bottom: 40px; /* Space between cards */
+  border: none; /* Remove card border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.trainer-card:hover {
+  transform: scale(1.05); /* Hover effect to scale card */
+}
+
+.trainer-card img {
+  width: 100%; /* Full width for image */
+  border-radius: 2%; /* Slight rounding of the image edges */
+}
+
+.footer {
+  padding: 20px 0; /* Vertical padding */
+  text-align: center; /* Center text inside footer */
+  width: 100%; /* Full width */
+  position: relative; /* Normal flow */
+}
+
+/* Ensure there's no margin or padding on the sides */
+.footer .container-fluid {
+  padding-left: 0; /* Remove left padding */
+  padding-right: 0; /* Remove right padding */
+}
+
+.footer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer h5 {
+  margin-bottom: 0px; /* Space below headings */
+}
+.about-section {
+  padding: 200px 60px; /* Increased padding for more spacing */
+  text-align: center; /* Center the text */
+  background-image: url("gym1.jpg"); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white; /* Optional: Change text color for better visibility */
+  position: relative; /* Allow for overlay effects */
+  overflow: hidden; /* Prevent overflow of the pseudo-element */
+}
+
+.about-section::before {
+  content: ""; /* Create a pseudo-element for background overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Place the overlay behind text */
+  backdrop-filter: blur(5px); /* Apply a blur effect */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+  position: relative; /* Positioning context for text */
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+.about-content img {
+  width: 40rem; /* Set a specific width */
+  height: 60rem; /* Increased height for the image */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-top: 20px; /* Optional: Add some space above the image */
+}
+
+.about-content p {
+  flex: 1;
+  max-width: 600px;
+  font-weight: 800;
+  font-size: 1.5rem; /* Increase font size for the paragraph */
+  line-height: 1.5; /* Add line height for better readability */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Add text shadow for better contrast */
+  margin: 0; /* Remove margin for consistency */
+}
+
+/* Optional media query for responsiveness */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center; /* Center text on small screens */
+  }
+
+  .about-content img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set a max width for the image */
+  }
+
+  .about-section {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+.about-content p {
+  flex: 1;
+  max-width: 600px;
+  font-weight: 600;
+  font-size: 1.5rem; /* Increase font size for the paragraph */
+  line-height: 1.5; /* Optional: Add line height for better readability */
+}
+
+h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  font-size: 2em; /* Adjust the heading size */
+}
+
+.plan-section {
+  padding: 60px 0; /* Vertical padding */
+  text-align: center;
+  background-color: #f8f9fa; /* Set your desired background color */
+}
+
+.plan-card {
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.plan-card:hover {
+  transform: scale(1.05); /* Scale up on hover for effect */
+}
+
+.plan-card h5 {
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Increase the font size for the plan title */
+}
+
+.plan-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-card ul li {
+  margin-bottom: 10px;
+}
+
+/* Ensure labels are left-aligned */
+/* Ensure labels are left-aligned */
+.modal-body .form-group label {
+  text-align: left; /* Ensures labels are left-aligned */
+  display: block; /* Ensures the label behaves like a block element */
+}
+
+/* Align input fields to the left */
+.modal-body .form-group input {
+  text-align: left; /* Ensure the text inside input fields is left-aligned */
+}
+
+/* Additional styling for form group */
+.modal-body .form-group {
+  margin-bottom: 15px; /* Adjust spacing between form groups */
+}
+
+/* Button should fill the width */
+.modal-body .btn-block {
+  width: 100%; /* Ensure buttons take full width */
+}
